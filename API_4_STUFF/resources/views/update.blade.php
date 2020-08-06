@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
-    <title>API 4 Stuff</title>
+    <title>update Product</title>
 </head>
-    <body>
-        <div class="container">
+<body>
+    
+<div class="container">
             <table >
                 <tr>
                     <td>Id</td>
@@ -15,19 +15,15 @@
                     <td>Prijs</td>
                     <td>Beschrijving</td>
                     <td>Voorraad</td>
-                    <td class="tableButtons"><a href="{{route('createProduct')}}">Nieuw</a></td>
+                    <td class="tableButtons"><button>Nieuw</button></td>
                 </tr>
-        @foreach ($products as $product)
                 <tr>
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->titel }}</td>
                     <td>{{ $product->prijs }}</td>
                     <td>{{ $product->beschrijving }}</td>
                     <td>{{ $product->voorraad }}</td>
-                    <td class="tableButtons"><a href="{{ route('editrouting', $product->id)}}">Bijwerken</a><button>Verwijderen</button></td>
                 </tr>
-        @endforeach
             </table>
-        </div>
-    </body>
+</body>
 </html>
